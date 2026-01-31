@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,24 +16,17 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var strided = require( '@stdlib/blas-ext-base-ssumors' ).ndarray;
-
-
-// MAIN //
+import { float32ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Computes the sum of a one-dimensional single-precision floating-point ndarray using ordinary recursive summation.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing an input ndarray
-* @returns {number} sum
+* @param arrays - array-like object containing an input ndarray
+* @returns sum
 *
 * @example
 * var Float32Array = require( '@stdlib/array-float32' );
@@ -45,12 +38,9 @@ var strided = require( '@stdlib/blas-ext-base-ssumors' ).ndarray;
 * var v = ssumors( [ x ] );
 * // returns 10.0
 */
-function ssumors( arrays ) {
-	var x = arrays[ 0 ];
-	return strided( numelDimension( x, 0 ), getData( x ), getStride( x, 0 ), getOffset( x ) ); // eslint-disable-line max-len
-}
+declare function ssumors( arrays: [ float32ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = ssumors;
+export = ssumors;
