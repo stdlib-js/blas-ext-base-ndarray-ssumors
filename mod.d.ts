@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,28 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { float32ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Compute the sum of a one-dimensional single-precision floating-point ndarray using ordinary recursive summation.
+* Computes the sum of all elements in a one-dimensional single-precision floating-point ndarray using ordinary recursive summation.
 *
-* @module @stdlib/blas-ext-base-ndarray-ssumors
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns sum
 *
 * @example
 * var Float32Vector = require( '@stdlib/ndarray-vector-float32' );
-* var ssumors = require( '@stdlib/blas-ext-base-ndarray-ssumors' );
 *
 * var x = new Float32Vector( [ 1.0, 3.0, 4.0, 2.0 ] );
 *
 * var v = ssumors( [ x ] );
 * // returns 10.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function ssumors( arrays: [ float32ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = ssumors;
