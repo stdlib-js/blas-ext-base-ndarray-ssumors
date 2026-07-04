@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Compute the sum of a one-dimensional single-precision floating-point ndarray using ordinary recursive summation.
+> Compute the sum of all elements in a one-dimensional single-precision floating-point ndarray using ordinary recursive summation.
 
 <section class="intro">
 
@@ -71,7 +71,7 @@ var ssumors = require( '@stdlib/blas-ext-base-ndarray-ssumors' );
 
 #### ssumors( arrays )
 
-Computes the sum of a one-dimensional single-precision floating-point ndarray using ordinary recursive summation.
+Computes the sum of all elements in a one-dimensional single-precision floating-point ndarray using ordinary recursive summation.
 
 ```javascript
 var Float32Vector = require( '@stdlib/ndarray-vector-float32' );
